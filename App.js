@@ -1,18 +1,11 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Modal } from 'react-native';
+import { useFonts } from 'expo-font';
 import CharacterPicker from './CharacterPicker';
 import RulesScreen from './RulesScreen';
-import { useFonts } from 'expo-font';
 
 export default function App() {
   const [showRules, setShowRules] = useState(false);
-  const [fontsLoaded] = useFonts({
-    'DKCanoodle': require('./assets/fonts/DK-Canoodle.otf'),
-    'Muli': require('./assets/fonts/Muli.ttf'),
-    'PatrickHand': require('./assets/fonts/PatrickHand.ttf'),
-    'FVAlmelo': require('./assets/fonts/FV_Almelo.ttf'),
-    'Wilhelm': require('./assets/fonts/Wilhelm.ttf'),
-  });
 
   const handleRulesClick = () => {
     setShowRules(true);
@@ -21,6 +14,12 @@ export default function App() {
   const handleCloseModal = () => {
     setShowRules(false);
   };
+
+  const [fontsLoaded] = useFonts({
+    'DKCanoodle': require('./assets/fonts/dk-canoodle.ttf'),
+    'Muli': require('./assets/fonts/Muli.ttf'),
+    'PatrickHand': require('./assets/fonts/PatrickHand-Regular.ttf'),
+    });
 
   return (
     <View style={styles.container}>
@@ -56,8 +55,7 @@ const styles = StyleSheet.create({
   },
   rulesText: {
     color: '#0E1B0E', 
-    fontFamily: 'PatrickHand',
-    fontSize: 20
+    fontSize: 16
   },
   modalContainer: {
     flex: 1,

@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
-import { useFonts } from 'expo-font';
 import charactersData from './characters.json';
 import CharacterCard from './CharacterCard';
 import Timer from './Timer';
@@ -55,13 +54,6 @@ const styles = StyleSheet.create({
 });
 
 const CharacterPicker = () => {
-  const [fontsLoaded] = useFonts({
-    'DKCanoodle': require('./assets/fonts/DK-Canoodle.otf'),
-    'Muli': require('./assets/fonts/Muli.ttf'),
-    'PatrickHand': require('./assets/fonts/PatrickHand.ttf'),
-    'FVAlmelo': require('./assets/fonts/FV_Almelo.ttf'),
-    'Wilhelm': require('./assets/fonts/Wilhelm.ttf'),
-  });
 
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [buttonTextIndex, setButtonTextIndex] = useState(0);
@@ -79,31 +71,24 @@ const CharacterPicker = () => {
     const selected = charactersData[randomIndex];
     setSelectedCharacter(selected);
 
-    // Change the button text to the next one in the array
     setButtonTextIndex((prevIndex) => (prevIndex + 1) % buttonTexts.length);
   };
 
   return (
     <View style={styles.container}>
-      {fontsLoaded ? (
-        <Text style={[styles.title, { fontFamily: 'DKCanoodle' }]}>Guess Who</Text>
-      ) : (
-        <Text>Loading fonts...</Text>
-      )}
-      <TouchableOpacity onPress={pickRandomCharacter} style={styles.button} activeOpacity={0.7}>
-        <View style={styles.buttonText}>
-          <Text>{buttonTexts[buttonTextIndex]}</Text>
-        </View>
-      </TouchableOpacity>
+        <Text style={styles.title}>Guess Who</Text>
+          <TouchableOpacity onPress={pickRandomCharacter} style={styles.button} activeOpacity={0.7}>
+            <View style={styles.buttonText}>
+              <Text>{buttonTexts[buttonTextIndex]}</Text>
+            </View>
+          </TouchableOpacity>
 
-      
-
-      {selectedCharacter && (
-        <View style={styles.characterInfo}>
-          <CharacterCard character={selectedCharacter} />
-        </View>
-      )}
-      <Timer />
+          {selectedCharacter && (
+            <View style={styles.characterInfo}>
+              <CharacterCard character={selectedCharacter} />
+            </View>
+          )}
+          <Timer />
     </View>
   );
 };

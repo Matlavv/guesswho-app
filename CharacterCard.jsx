@@ -1,16 +1,6 @@
 import React from 'react';
 import { View, Text, ImageBackground, StyleSheet } from 'react-native';
 import charactersData from './characters.json';
-import { useFonts } from 'expo-font';
-
-const CharacterPicker = () => {
-  const [fontsLoaded] = useFonts({
-    'DKCanoodle': require('./assets/fonts/DK-Canoodle.otf'),
-    'Muli': require('./assets/fonts/Muli.ttf'),
-    'PatrickHand': require('./assets/fonts/PatrickHand.ttf'),
-    'FVAlmelo': require('./assets/fonts/FV_Almelo.ttf'),
-    'Wilhelm': require('./assets/fonts/Wilhelm.ttf'),
-  })};
   
 const styles = StyleSheet.create({
   cardContainer: {
@@ -31,7 +21,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 5,
-    fontFamily: 'Wilhelm',
   },
   characterOccupation: {
     fontSize: 22,
