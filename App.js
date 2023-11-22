@@ -2,9 +2,17 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Modal } from 'react-native';
 import CharacterPicker from './CharacterPicker';
 import RulesScreen from './RulesScreen';
+import { useFonts } from 'expo-font';
 
 export default function App() {
   const [showRules, setShowRules] = useState(false);
+  const [fontsLoaded] = useFonts({
+    'DKCanoodle': require('./assets/fonts/DK-Canoodle.otf'),
+    'Muli': require('./assets/fonts/Muli.ttf'),
+    'PatrickHand': require('./assets/fonts/PatrickHand.ttf'),
+    'FVAlmelo': require('./assets/fonts/FV_Almelo.ttf'),
+    'Wilhelm': require('./assets/fonts/Wilhelm.ttf'),
+  });
 
   const handleRulesClick = () => {
     setShowRules(true);
@@ -58,7 +66,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   closeButton: {
-    marginTop: 20,
+    marginTop: 600,
     padding: 10,
     backgroundColor: '#E9B1B0',
     borderRadius: 10,

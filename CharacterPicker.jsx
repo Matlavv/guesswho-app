@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import charactersData from './characters.json';
 import CharacterCard from './CharacterCard';
+import Timer from './Timer';
 
 const styles = StyleSheet.create({
 
@@ -69,8 +70,8 @@ const CharacterPicker = () => {
     'Choose a character',
     'Another one ?',
     'Not convinced ?',
-    'Still haven\'t found one ?',
-    'Is it our characters you don\'t like ???',
+    'Still haven\'t found one ??',
+    'Is it our characters you don\'t like !???',
   ];
 
   const pickRandomCharacter = () => {
@@ -94,11 +95,15 @@ const CharacterPicker = () => {
           <Text>{buttonTexts[buttonTextIndex]}</Text>
         </View>
       </TouchableOpacity>
+
+      
+
       {selectedCharacter && (
         <View style={styles.characterInfo}>
           <CharacterCard character={selectedCharacter} />
         </View>
       )}
+      <Timer />
     </View>
   );
 };
