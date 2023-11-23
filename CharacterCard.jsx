@@ -67,14 +67,16 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom: 5,
     fontFamily: 'DKCanoodle',
+    color: "#D96745",
   },
   characterOccupation: {
     fontSize: 22,
     color: '#0E1B0E',
     fontFamily: 'PatrickHand',
+    color: "#D96745",
   },
   characterDescription: {
-    fontSize: 20,
+    fontSize: 16,
     textAlign: 'center',
     fontFamily: 'Muli',
   },

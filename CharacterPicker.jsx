@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
     fontFamily: 'DKCanoodle',
     marginBottom: 20,
     position: 'absolute',
-    top: 5, 
+    top: 40, 
+    color: '#F7EDE2',
   },
   button: {
     width: 160,

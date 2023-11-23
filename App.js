@@ -57,8 +57,10 @@ const styles = StyleSheet.create({
     bottom: 20,
   },
   rulesText: {
-    color: '#0E1B0E',
-    fontSize: 16,
+    color: '#D96745',
+    fontSize: 20,
+    textDecorationLine: 'underline',
+    bottom: 20,
   },
   modalContainer: {
     flex: 1,
