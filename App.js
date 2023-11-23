@@ -1,3 +1,4 @@
+// Dans App.js
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, Modal } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -19,14 +20,16 @@ export default function App() {
     'DKCanoodle': require('./assets/fonts/dk-canoodle.ttf'),
     'Muli': require('./assets/fonts/Muli.ttf'),
     'PatrickHand': require('./assets/fonts/PatrickHand-Regular.ttf'),
-    });
+  });
 
   return (
     <View style={styles.container}>
-      <CharacterPicker />
+      <CharacterPicker fontsLoaded={fontsLoaded} />
 
       <TouchableOpacity onPress={handleRulesClick} style={styles.rulesContainer}>
-        <Text style={styles.rulesText}>Find the rules</Text>
+        <Text style={[styles.rulesText, fontsLoaded && { fontFamily: 'PatrickHand' }]}>
+          Find the rules
+        </Text>
       </TouchableOpacity>
 
       {/* Modal to display the rules */}
@@ -54,8 +57,8 @@ const styles = StyleSheet.create({
     bottom: 20,
   },
   rulesText: {
-    color: '#0E1B0E', 
-    fontSize: 16
+    color: '#0E1B0E',
+    fontSize: 16,
   },
   modalContainer: {
     flex: 1,

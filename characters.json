@@ -3,14 +3,14 @@
       "id": 1,
       "firstName": "Amelia",
       "occupation": "Frontend developer",
-      "photo": "amelia.png",
+      "photo": "./amelia.png",
       "description": "• Creative & patient\n • Collaborative & problem solver\n • Figma, Github, VScode \n • HTML, CSS, JavaScript, React.js "
     },
     {
       "id": 2,
       "firstName": "Reena",
       "occupation": "Backend developer",
-      "photo": "./assets/characterPicture/reena.png",
+      "photo": "./characterPicture/reena.png",
       "description": "• Analytical Mind & Logical thinking\n• Problem solver & collaborative\n • Postman, Github, Docker \n • PHP, Java, Node.js, SQL "
     },
     {

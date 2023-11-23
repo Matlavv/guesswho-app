@@ -14,12 +14,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   title: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    fontSize: 80,
+    fontFamily: 'DKCanoodle',
     marginBottom: 20,
     position: 'absolute',
     top: 5, 
-
   },
   button: {
     width: 160,
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const CharacterPicker = () => {
+const CharacterPicker = ({ fontsLoaded }) => {
 
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [buttonTextIndex, setButtonTextIndex] = useState(0);
@@ -76,7 +75,9 @@ const CharacterPicker = () => {
 
   return (
     <View style={styles.container}>
+        {fontsLoaded && (
         <Text style={styles.title}>Guess Who</Text>
+      )}
           <TouchableOpacity onPress={pickRandomCharacter} style={styles.button} activeOpacity={0.7}>
             <View style={styles.buttonText}>
               <Text>{buttonTexts[buttonTextIndex]}</Text>

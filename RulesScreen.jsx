@@ -4,10 +4,10 @@ import { View, Text, TouchableOpacity, Modal, ScrollView, StyleSheet } from 'rea
 const RulesScreen = ({ showRules, setShowRules }) => {
   const rulesContent = `
     1. The player with the least battery on their phone starts.
-    2. Players take turns askings questions about styles related to tech professions.
-    3. Questions must be phrased to explicit "yes" or "no".
+    2. Players take turns askings questions about skills related to tech professions.
+    3. Questions must be phrased to elicit "yes" or "no" answers.
     4. The goal is to narrow down the list of possible professions based on the answers to the questions.
-    5. Players can use the same board to eliminate professions by ruffins them or marking them in some other way.
+    5. Players can use the game board to eliminate professions by flipping them or marking them in some other way.
     6. The first player who thinks they have identified their opponent's profession can have a guess instead of asking a question.
   `;
 
