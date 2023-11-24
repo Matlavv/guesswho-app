@@ -5,7 +5,9 @@
 git clone git@github.com:Matlavv/guesswho-app.git
 
 Ouvrir le dossier dans Visual Studio code 
+
 cd guesswho-app
+
 yarn install / npm install
 
 yarn start / npm start
