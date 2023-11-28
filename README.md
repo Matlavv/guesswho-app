@@ -4,7 +4,7 @@
 
 git clone git@github.com:Matlavv/guesswho-app.git
 
-Ouvrir le dossier dans Visual Studio code 
+Open the folder in Visual Studio code 
 
 cd guesswho-app
 
@@ -13,9 +13,9 @@ yarn install / npm install
 yarn start / npm start
 
 
-Pour lancer l'application sur le web : faire w dans le terminal une fois l'application installée
+To start the application on the web : press "w" in the terminal once the application started
 
-Pour lancer sur un téléphone scanner le QR code affiché au lancement de metro dans l'application Expo Go
+To launch on a phone scan the QR code displayed when launching metro in the Expo Go application
 
-Pour installer l'apk directement sur android :
+You can install the APK on an android device :
 https://we.tl/t-4LElI22YGq
